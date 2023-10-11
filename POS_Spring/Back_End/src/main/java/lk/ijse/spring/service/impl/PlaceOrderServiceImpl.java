@@ -13,9 +13,13 @@ import lk.ijse.spring.service.PlaceOrderService;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
+@Service
+@Transactional
 public class PlaceOrderServiceImpl implements PlaceOrderService {
     @Autowired
     OrdersRepo ordersRepo;
